@@ -53,9 +53,9 @@
       '<li>' +
       '  <a href="" data-mfb-label="{{label}}" class="mfb-component__button--child" ' +
       '     style="background: transparent; box-shadow: none;">' +
-      '     <md-button style="margin: 0;" class="md-fab md-accent" aria-label={{label}}>' +
+      '     <md-button style="margin: 0;" class="md-fab stuffistry-red" aria-label={{label}}>' +
       //'       <md-icon md-svg-src="img/icons/android.svg"></md-icon>' +
-      '       <md-icon md-svg-icon="{{icon}}"></md-icon>' +
+      '       <md-icon md-svg-icon="{{mdicon}}"></md-icon>' +
       '     </md-button>' +
       '  </a>' +
       '</li>'
@@ -196,10 +196,13 @@
       replace: true,
       scope: {
         icon: '@',
-        label: '@'
+        label: '@',
+        mdicon: '@'
       },
       templateUrl: function(elem, attrs) {
-        return attrs.templateUrl || 'ng-mfb-button-default.tpl.html';
+        console.log(attrs.mdicon);
+        var defaultTP = attrs.mdicon ? 'ng-mfb-button-md.tpl.html' : 'ng-mfb-button-default.tpl.html';
+        return attrs.templateUrl || defaultTP;
       }
     };
   }]);
