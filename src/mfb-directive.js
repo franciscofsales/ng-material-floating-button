@@ -55,7 +55,7 @@
       '     style="background: transparent; box-shadow: none;">' +
       '     <md-button style="margin: 0;" class="md-fab md-warn" aria-label={{label}}>' +
       //'       <md-icon md-svg-src="img/icons/android.svg"></md-icon>' +
-      '       <md-icon md-svg-icon="{{mdicon}}"></md-icon>' +
+      '       <md-icon md-svg-icon="{{mdicon}}" style="fill:white;"></md-icon>' +
       '     </md-button>' +
       '  </a>' +
       '</li>'
@@ -200,7 +200,6 @@
         mdicon: '@'
       },
       templateUrl: function(elem, attrs) {
-        console.log(attrs.mdicon);
         var defaultTP = attrs.mdicon ? 'ng-mfb-button-md.tpl.html' : 'ng-mfb-button-default.tpl.html';
         return attrs.templateUrl || defaultTP;
       }
