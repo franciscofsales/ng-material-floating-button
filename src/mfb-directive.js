@@ -53,7 +53,7 @@
       '<li>' +
       '  <a href="" data-mfb-label="{{label}}" class="mfb-component__button--child" ' +
       '     style="background: transparent; box-shadow: none;">' +
-      '     <md-button style="margin: 0;" class="md-fab stuffistry-red" aria-label={{label}}>' +
+      '     <md-button style="margin: 0;" class="md-fab md-warn" aria-label={{label}}>' +
       //'       <md-icon md-svg-src="img/icons/android.svg"></md-icon>' +
       '       <md-icon md-svg-icon="{{mdicon}}"></md-icon>' +
       '     </md-button>' +
